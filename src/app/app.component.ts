@@ -8,35 +8,45 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Dropdown-Calendar';
-  public CalendarForm:any;
+  public CalendarForm: any;
   public date: Array<number> = [];
-  public month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  public year:any[]=[]
+  public month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  public year: any[] = []
+  public j=0;
 
-  constructor(public formBuilder: FormBuilder){}
-
-  ngOnInIt(){
+  constructor(public formBuilder: FormBuilder) {
     this.calendar();
-    for(let i=1;i<=31;i++){
-      this.date[i]=i;
+    for (let i = 1; i <= 31; i++) {
+      this.date[i] = i;
     }
-    for(let i=1950;i<=2022;i++){
-      this.year[i]=i;
+    for (let i = 1950; i <= 2022; i++) {
+
+      this.year[this.j++] = i;
     }
   }
-  calendar(){
-    this.CalendarForm=this.formBuilder.group({
-      date:new FormControl("",Validators.required),
-      moth:new FormControl("",Validators.required),
-      year:new FormControl("",Validators.required)
+
+  ngOnInIt() {
+    this.calendar();
+    for (let i = 1; i <= 31; i++) {
+      this.date[i] = i;
+    }
+    for (let i = 1950; i <= 2022; i++) {
+      this.year[i] = i;
+    }
+  }
+  calendar() {
+    this.CalendarForm = this.formBuilder.group({
+      dat: new FormControl("", Validators.required),
+      month: new FormControl("", Validators.required),
+      year: new FormControl("", Validators.required)
     })
   }
-  values(){
-    for(let i=1;i<=31;i++){
-      this.date[i]=i;
+  values() {
+    for (let i = 1; i <= 31; i++) {
+      this.date[i] = i;
     }
-    for(let i=1950;i<=2022;i++){
-      this.year[i]=i;
+    for (let i = 1950; i <= 2022; i++) {
+      this.year[i] = i;
     }
   }
 
