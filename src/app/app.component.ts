@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { CustomValidators } from './custom-validator';
 
 @Component({
   selector: 'app-root',
@@ -42,10 +43,11 @@ export class AppComponent {
   calendar(){
     console.log("calender");
     this.calendarForm=this.formBuilder.group({
-      dat: new FormControl("",Validators.required),
+      date: new FormControl("",Validators.required),
       month: new FormControl("",Validators.required),
       year: new FormControl("",Validators.required),
-    })
+    },{validator:CustomValidators()}
+    )
   }
   values(){
     // for(let i=1;i<=31;i++){

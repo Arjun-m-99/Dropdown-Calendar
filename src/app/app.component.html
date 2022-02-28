@@ -1,24 +1,29 @@
 <form [formGroup]="calendarForm">
   <h1>DropDown Calendar for Date of Birth</h1>
-  <div class="row col-md-6 card">
+  <div class="row col-md-12 card">
     <!-- <input formControlName="input" type="text"> -->
     <div class="">
-      <select class="size col-md-4" formControlName="dat">
-        <option value="date">Select Date</option>
+      <select class="size" formControlName="date">
+        <option value="" selected>Select Date</option>
         <option *ngFor="let date of dates" value={{date}}>{{date}}</option>
       </select>
-      </div>
-  <div class="" >
-      <select class="size col-md-4" formControlName="month">
-        <option value="">Select Month</option>
+    </div>
+    <div class="">
+      <select class="size" formControlName="month">
+        <option value="" selected>Select Month</option>
         <option *ngFor="let month of months" value={{month}}>{{month}}</option>
       </select>
-      </div>
-  <div class="" >
-      <select class="size col-md-4 " formControlName="year">
-        <!-- <option value="year">Select Year</option> -->
+    </div>
+    <div class="">
+      <select class="size" formControlName="year">
+        <option value="" selected>Select Year</option>
         <option *ngFor="let year of years" value={{year}}>{{year}}</option>
       </select>
+    </div>
+    <div *ngIf="calendarForm.controls['date'].invalid && calendarForm.controls['date'].touched" class="warn">
+      <div *ngIf="calendarForm.controls['date'].errors?.required">
+        Password is required.
+      </div>
     </div>
   </div>
 </form>

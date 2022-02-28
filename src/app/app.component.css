@@ -6,11 +6,21 @@ h1{
     height: 50px;
     padding-top: 8px;
     margin-left: 25%;
-    /*width: 33%;*/
+    max-width: 50%;
+    background-color: bisque;
 }
+
+select{
+    background-color: rgb(171, 171, 226);
+}
+option{
+    background-color: aqua;
+}
+
 .size{
     margin: 2px;
     border: 2px solid black;
     height: 30px;
-    width: 150px;
+    width: 100%;
+    text-align: center;
 }
