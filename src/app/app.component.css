@@ -24,3 +24,7 @@ option{
     width: 100%;
     text-align: center;
 }
+.error-msg{
+    text-align: center;
+    color: red;
+}
