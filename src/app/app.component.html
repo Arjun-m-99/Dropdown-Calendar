@@ -1,6 +1,6 @@
 <form [formGroup]="calendarForm">
   <h1>DropDown Calendar for Date of Birth</h1>
-  <div >
+  <div>
     <!-- <input formControlName="input" type="text"> -->
     <div class="row col-md-12 card">
       <div class="">
@@ -23,9 +23,12 @@
       </div>
     </div>
     <div class="error-msg" *ngIf="calendarForm.controls['date'].invalid && calendarForm.controls['date'].touched">
-      <div *ngIf="calendarForm.controls['date'].errors?.required">
-       <b> Invalid!!!</b>
-      </div>
+      <!-- <div *ngIf="calendarForm.controls['date'].errors?.required"> -->
+      <b> Invalid!!!</b>
+      <!-- </div> -->
+    </div>
+    <div class="valid-msg" *ngIf="calendarForm.controls['date'].valid && calendarForm.controls['date'].touched && calendarForm.controls['date'].touched && calendarForm.controls['date'].touched && calendarForm.controls['month'].valid && calendarForm.controls['year'].valid">
+      <b> Valid!!!</b>
     </div>
   </div>
 

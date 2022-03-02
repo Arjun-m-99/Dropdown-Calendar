@@ -41,12 +41,12 @@ export class AppComponent implements OnInit {
   }
   calendar() {
     console.log("calender");
-    
+
     this.calendarForm = this.formBuilder.group({
       date: new FormControl("", Validators.required),
       month: new FormControl("", Validators.required),
       year: new FormControl("", Validators.required),
-    }, { validator: CustomValidators() }
+    }, { validator: CustomValidators("month") }
     )
   }
   values() {

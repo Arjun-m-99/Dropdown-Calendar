@@ -28,3 +28,7 @@ option{
     text-align: center;
     color: red;
 }
+.valid-msg{
+    text-align: center;
+    color: rgb(73, 243, 73);
+}
