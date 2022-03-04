@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+/* app-root{
+    background-color: rgb(133, 153, 151);
+} */
+
+.fa-spin{
+    color: black;
+    margin-left: 45%;
+    margin-top: 30vh;
+    height: 30%;
+    border-radius: 100%;
+    background-color: white;
+    animation-duration: var(--fa-animation-duration, 30s) !important;  
+}

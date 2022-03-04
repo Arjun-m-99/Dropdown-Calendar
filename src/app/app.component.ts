@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { CustomValidators } from './custom-validator';
 import { OnInit } from '@angular/core';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  filmIcon = faFilm;
+  
   title = 'Dropdown-Calendar';
   public calendarForm: any;
   public dates: number[] = [];

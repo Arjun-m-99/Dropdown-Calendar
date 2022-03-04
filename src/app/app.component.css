@@ -1,7 +1,14 @@
-h1{
+* {
+    font-family: monospace;
+    background-color: rgb(133, 153, 151);
+    ;
+}
+
+h1 {
     text-align: center;
 }
-.card{
+
+.card {
     border: 1px solid black;
     height: 50px;
     padding-top: 8px;
@@ -10,25 +17,41 @@ h1{
     background-color: bisque;
 }
 
-select{
+select {
     background-color: rgb(171, 171, 226);
 }
-option{
-    background-color: aqua;
+
+option {
+    background-color: rgb(133, 153, 151);
 }
 
-.size{
+.size {
     margin: 2px;
     border: 2px solid black;
     height: 30px;
     width: 100%;
     text-align: center;
 }
-.error-msg{
+
+.error-msg {
     text-align: center;
     color: red;
+    animation-duration: 2ms;
+    animation-name: bounce;
+    animation-direction: var(--fa-animation-direction, alternate-reverse);
+    animation-iteration-count: var(--fa-animation-iteration-count, infinite);
 }
-.valid-msg{
+
+@keyframes bounce {
+    from {
+        margin-left: 25%;
+    }
+    to {
+        margin-left: 30%;
+    }
+}
+
+.valid-msg {
     text-align: center;
     color: rgb(73, 243, 73);
 }
