@@ -36,18 +36,18 @@ option {
 .error-msg {
     text-align: center;
     color: red;
-    animation-duration: 2ms;
-    animation-name: bounce;
+    animation-duration: 100ms;
+    animation-name: shake;
     animation-direction: var(--fa-animation-direction, alternate-reverse);
-    animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+    animation-iteration-count: var(--fa-animation-iteration-count, 10);
 }
 
-@keyframes bounce {
+@keyframes shake {
     from {
-        margin-left: 25%;
+        margin-left: 0%;
     }
     to {
-        margin-left: 30%;
+        margin-left: 20%;
     }
 }
 
