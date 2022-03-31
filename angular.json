@@ -128,6 +128,9 @@
               "devServerTarget": "Dropdown-Calender:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
