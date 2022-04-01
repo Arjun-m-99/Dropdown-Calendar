@@ -40,11 +40,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.calendar();
-    console.log("ngOnInIt");
+    //console.log("ngOnInIt");
 
   }
   calendar() {
-    console.log("calender");
+    //console.log("calender");
 
     this.calendarForm = this.formBuilder.group({
       date: new FormControl("", Validators.required),
