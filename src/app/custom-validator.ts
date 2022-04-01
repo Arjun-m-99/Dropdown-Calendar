@@ -2,9 +2,9 @@ import { AbstractControl, FormGroup } from "@angular/forms";
 
 export function CustomValidators(month : String) {
     return (formGroup: FormGroup) => {
-        console.log(formGroup.controls.date.value);
-        console.log(formGroup.controls.month.value);
-        console.log(formGroup.controls.year.value);
+        // console.log(formGroup.controls.date.value);
+        // console.log(formGroup.controls.month.value);
+        // console.log(formGroup.controls.year.value);
         const checkDate = formGroup.controls['date'];
         if (formGroup.controls.month.value == 'February') {
             if (formGroup.controls.year.value % 4 == 0) {
